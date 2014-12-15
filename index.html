@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Hue Talk Sample</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="../jquery/jquery-1.11.1.min.js"></script>
+  <script src="js/lib/color-convert-0.5.1.min.js"></script>
+  <script src="js/lib/hue.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Hue Talk Sample</h1>
+        <p class="well">音量に応じてHueの光量を変化</p>
+        <div class="col-md-4">
+          <form class="form-horizontal" >
+            <div class="form-group">
+                <label for="volume">Volume: </label>
+                <input type="text" id="volume" value="0" />
+            </div>
+            <div class="form-group" >
+                <label for="status">Color Status: </label>
+                <input type="text" id="status" value="blue" />
+            </div>
+            <div class="form-group">
+                <label for="th_slider">Threshold</label>
+                <input type="text" id="threshold" type="text" size="3" reqdonly value="50"/>
+                <input id="th_slider" type="range" min="0" max="255" step="1" value="50" style="width:300px" />
+            </div>
+            <div class="form-group">
+                <label for="in_slider">Interval</label>
+                <input type="text" id="interval" type="text" size="3" reqdonly value="80"/>
+                <input id="in_slider" type="range" min="10" max="160" step="1" value="80" style="width:300px" />
+            </div>
+          </form>
+        </div>
+        <div class="col-md-8">
+          <canvas width="720" height="240">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
